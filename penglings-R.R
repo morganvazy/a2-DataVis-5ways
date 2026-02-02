@@ -2,6 +2,8 @@
 #data analysis ggplot2 scatter plots quick guide
 #as reference
 
-ggplot(penglings, aes(x=flipper_length_mm, y=body_mass_g)) + geom_point(aes(color=species, size=bill_length_mm), alpha=0.8) +scale_color_manual(values = c("Adelie" = "#FA9702", "Chinstrap"="#B802FA", "Gentoo"="#018A75"))
+ggplot(penglings, aes(x=flipper_length_mm, y=body_mass_g
+  )) + geom_point(aes(color=species, size=bill_length_mm), alpha=0.8) +
+  scale_color_manual(values = c("Adelie" = "#FA9702", "Chinstrap"="#B802FA", "Gentoo"="#018A75"))
 
 ggsave(filename = "img/MVggplot2_plot.png",width=7,height=5,dpi=300)
