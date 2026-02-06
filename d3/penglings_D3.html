@@ -21,7 +21,7 @@ const marginTop = 10;
 const marginBottom = 50;
 const marginLeft = 50;
 const marginRight = 60;
-// Add an SVG
+//add an SVG
 const svg = d3.create("svg")
     .attr("width", width+ marginLeft + marginRight)
     .attr("height", height + marginTop + marginBottom);
@@ -30,11 +30,12 @@ const svg = d3.create("svg")
 //https://d3-graph-gallery.com/graph/interactivity_tooltip.html
 var tooltip = d3.select("#container").append("div")
 .style("position", "absolute").style("visibility", "hidden")
-.style("background-color", "white")
-.style("border", "1px solid black")
+.style("background-color", "white") //adds a white box behind the data when interaction occurs
+.style("border", "1px solid black") //adds a black border when interaction occurs
 .style("pointer-events", "none");
 
 // Read CSV
+    //converts this data from textual to numerical
 d3.csv("https://raw.githubusercontent.com/morganvazy/a2-DataVis-5ways/refs/heads/main/penglings.csv")
   .then(data => {
 
@@ -92,6 +93,7 @@ d3.csv("https://raw.githubusercontent.com/morganvazy/a2-DataVis-5ways/refs/heads
       .attr("r", d => size(d.bill_length_mm))
       .style("fill", d => color(d.species))
       .style("opacity", 0.8)
+    //adding tooltip and event logic for hover effect
       //https://medium.com/@kj_schmidt/hover-effects-for-your-scatter-plot-447df80ea116
       //used chatgpt to fix event logic bc the source above uses an older version of d3
       .on("mouseover", () => tooltip.style("visibility", "visible"))
@@ -102,11 +104,12 @@ d3.csv("https://raw.githubusercontent.com/morganvazy/a2-DataVis-5ways/refs/heads
         ).style("left", (event.pageX + 10) + "px").style("top", (event.pageY - 15) + "px");
       }).on("mouseout", () =>tooltip.style("visibility", "hidden"));
 
-    // Append SVG to container AFTER everything is ready
+    //append SVG
     document.getElementById("container").append(svg.node());
 
   });
 
 </script>
 </body>
+
 </html>
