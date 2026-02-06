@@ -41,20 +41,75 @@ https://morganvazy.github.io/a2-DataVis-5ways/R/penglings_R_interactive.html
 ## Technical Achievements
 - Hover feature that shows the penguin's flipper length, body mass, species, and bill length using plotly.
 ## Design Achievements
-- created a manual color scale with hex codes so colors were accurate to the original reference picture
+- created a manual color scale with hex codes so colors were accurate to the original reference picture (hex codes: Adelie - #FA9702, Chinstrap - #B802FA, Gentoo - #018A75)
 ## Sources & References
 - https://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization - reference for scatterplot
 - https://ggplot2.tidyverse.org/reference/labs.html - used for axis labels
 - https://stackoverflow.com/questions/37465285/interactive-scatter-plots-in-r-overlay-hover-summary-tooltip-as-user-supplied-p - used for hover feature
 
-# d3...
+# Vega-Lite + Javascript
+Vega-Lite is a high level grammar used to create interactive visuals with a JSON syntax.
+I created a scatterplot of the penglings data with a tooltip for hovering over data points. I explicitly coded in the values for tick marks to match the tick marks on the R graph. For the colors representing each pengin species, I used the same hex codes as for the R graph and created a scale that mapped the hex codes to each species. When hovering over a data point, the flipper length, body mass, species, and bill length appear in a box to the side of the point.
 
-(And so on...)
+There are many strong resources on vega-lite and many examples of scatterplots. Adding the tooltip for interactivity was relatively straightforward and was easily scalable to display many fields when hovering. I felt like the relative sizes of each data point based on bill length were appropriate and made for a legible graph. After replicating the graph, there was very little additional customization necessary in order to make the graph legible. I think Vega-Lite is a strong choice for someone looking for customizability without overhwleming syntax.
 
+![Vega-Lite](img/Vega-Lite.png)
 
+## Link to interactive plot
+https://morganvazy.github.io/a2-DataVis-5ways/Vega-Lite/penglings_Vega-Lite_interactive.html
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- Hover feature that shows the penguin's flipper length, body mass, species, and bill length using a tooltip.
+## Design Achievements
+- created a manual color scale with hex codes so colors were consistent across graphs (hex codes: Adelie - #FA9702, Chinstrap - #B802FA, Gentoo - #018A75)
+- consistent tick marks values on x and y axis as all other graphs
+## Sources & References
+- https://vega.github.io/vega-lite/examples/point_2d.html
+- https://vega.github.io/vega-lite/tutorials/explore.html
+- https://vega.github.io/vega-lite/docs/scale.html
+- https://vega.github.io/vega-lite/docs/axis.html
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+# d3 + Javascript
+Add stuff here
+![d3](img/d3_plot.png)
+
+## Link to interactive plot
+https://morganvazy.github.io/a2-DataVis-5ways/d3/penglings_D3.html
+## Technical Achievements
+- Hover feature that shows the penguin's flipper length, body mass, species, and bill length using a tooltip.
+## Design Achievements
+- created a manual color scale with hex codes so colors were consistent across graphs (hex codes: Adelie - #FA9702, Chinstrap - #B802FA, Gentoo - #018A75)
+- consistent tick marks values on x and y axis as all other graphs
+## Sources & References
+- https://vega.github.io/vega-lite/examples/point_2d.html
+- https://vega.github.io/vega-lite/tutorials/explore.html
+- https://vega.github.io/vega-lite/docs/scale.html
+- https://vega.github.io/vega-lite/docs/axis.html
+
+# Tableau
+Add stuff here
+![d3](img/tableau_plot.png)
+
+## Link to interactive plot
+https://public.tableau.com/app/profile/morgan.vasiliou/viz/penglings-tableau/Sheet1?publish=yes
+## Technical Achievements
+- Hover feature that shows the penguin's flipper length, body mass, species, and bill length using a tooltip.
+## Design Achievements
+- created a manual color scale with hex codes so colors were consistent across graphs (hex codes: Adelie - #FA9702, Chinstrap - #B802FA, Gentoo - #018A75)
+## Sources & References
+
+# Vega Altair + Python
+Add stuff here
+![d3](img/altair_plot.png)
+
+## Link to interactive plot
+https://morganvazy.github.io/a2-DataVis-5ways/altair/penglings_altair.html
+## Technical Achievements
+- Hover feature that shows the penguin's flipper length, body mass, species, and bill length using a tooltip.
+## Design Achievements
+- created a manual color scale with hex codes so colors were consistent across graphs (hex codes: Adelie - #FA9702, Chinstrap - #B802FA, Gentoo - #018A75)
+- consistent tick marks values on x and y axis as all other graphs
+## Sources & References
+- https://vega.github.io/vega-lite/examples/point_2d.html
+- https://vega.github.io/vega-lite/tutorials/explore.html
+- https://vega.github.io/vega-lite/docs/scale.html
+- https://vega.github.io/vega-lite/docs/axis.html
