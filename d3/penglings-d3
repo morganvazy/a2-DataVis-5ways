@@ -26,6 +26,14 @@ const svg = d3.create("svg")
     .attr("width", width+ marginLeft + marginRight)
     .attr("height", height + marginTop + marginBottom);
 
+  //add tooltip for interactivity
+//https://d3-graph-gallery.com/graph/interactivity_tooltip.html
+var tooltip = d3.select("#container").append("div")
+.style("position", "absolute").style("visibility", "hidden")
+.style("background-color", "white")
+.style("border", "1px solid black")
+.style("pointer-events", "none");
+
 // Read CSV
 d3.csv("https://raw.githubusercontent.com/morganvazy/a2-DataVis-5ways/refs/heads/main/penglings.csv")
   .then(data => {
@@ -83,7 +91,16 @@ d3.csv("https://raw.githubusercontent.com/morganvazy/a2-DataVis-5ways/refs/heads
       .attr("cy", d => y(d.body_mass_g))
       .attr("r", d => size(d.bill_length_mm))
       .style("fill", d => color(d.species))
-      .style("opacity", 0.8);
+      .style("opacity", 0.8)
+      //https://medium.com/@kj_schmidt/hover-effects-for-your-scatter-plot-447df80ea116
+      //used chatgpt to fix event logic bc the source above uses an older version of d3
+      .on("mouseover", () => tooltip.style("visibility", "visible"))
+      .on("mousemove", (event,d)=>{
+        tooltip.html(
+          `Species: ${d.species}<br>` + `Flipper length: ${d.flipper_length_mm} mm<br>`
+          + `Body mass: ${d.body_mass_g} g<br>` + `Bill length: ${d.bill_length_mm} mm`
+        ).style("left", (event.pageX + 10) + "px").style("top", (event.pageY - 15) + "px");
+      }).on("mouseout", () =>tooltip.stle("visibility", "hidden"));
 
     // Append SVG to container AFTER everything is ready
     document.getElementById("container").append(svg.node());
