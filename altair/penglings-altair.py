@@ -15,8 +15,9 @@ chart = alt.Chart(df).mark_circle().encode(
         domain = ["Adelie", "Chinstrap", "Gentoo"],
         range = ["#FA9702","#B802FA","#018A75"]
     )),
-    size=alt.Size("bill_length_mm", scale=alt.Scale(range=[0,200])),
+    size=alt.Size("bill_length_mm", scale=alt.Scale(range=[0,150])),
     tooltip = ["flipper_length_mm", "body_mass_g", "species", "bill_length_mm"]
 ).interactive()
 
 chart.save("penglings_altair.html")
+
