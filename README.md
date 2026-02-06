@@ -42,9 +42,9 @@ Examples and documentation for ggplot2 and plotly were abundant and easy to find
 ## Design Achievements
 - created a manual color scale with hex codes so colors were accurate to the original reference picture
 ## Sources & References
-https://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization - reference for scatterplot
-https://ggplot2.tidyverse.org/reference/labs.html - used for axis labels
-https://stackoverflow.com/questions/37465285/interactive-scatter-plots-in-r-overlay-hover-summary-tooltip-as-user-supplied-p - used for hover feature
+- https://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization - reference for scatterplot
+- https://ggplot2.tidyverse.org/reference/labs.html - used for axis labels
+- https://stackoverflow.com/questions/37465285/interactive-scatter-plots-in-r-overlay-hover-summary-tooltip-as-user-supplied-p - used for hover feature
 
 # d3...
 
