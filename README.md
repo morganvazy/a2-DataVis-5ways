@@ -53,7 +53,7 @@ I created a scatterplot of the penglings data with a tooltip for hovering over d
 
 There are many strong resources on vega-lite and many examples of scatterplots. Adding the tooltip for interactivity was relatively straightforward and was easily scalable to display many fields when hovering. I felt like the relative sizes of each data point based on bill length were appropriate and made for a legible graph. After replicating the graph, there was very little additional customization necessary in order to make the graph legible. I think Vega-Lite is a strong choice for someone looking for customizability without overhwleming syntax.
 
-![Vega-Lite](img/Vega-Lite.png)
+![Vega-Lite](img/Vega-Lite_plot.png)
 
 ## Link to interactive plot
 https://morganvazy.github.io/a2-DataVis-5ways/Vega-Lite/penglings_Vega-Lite_interactive.html
