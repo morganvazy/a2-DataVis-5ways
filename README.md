@@ -36,7 +36,8 @@ I created an interactive visualization using plotly. When mousing over a point, 
 Examples and documentation for ggplot2 and plotly were abundant and easy to find. ggplot2 allows for a diverse visualization with little code. The biggest barrier was familiarizing myself with the goem_point() and aes() functions since I had no previous experience with these.
 
 ![ggplot2](img/MVggplot2_plot.png)
-
+## Link to interactive plot
+https://morganvazy.github.io/a2-DataVis-5ways/R/penglings_R_interactive.html
 ## Technical Achievements
 - Hover feature that shows the penguin's flipper length, body mass, species, and bill length using plotly.
 ## Design Achievements
