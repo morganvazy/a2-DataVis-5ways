@@ -3,7 +3,7 @@
 R is a language used for statistical computing and data visualization. ggplot2 is a data visualization library in R. plotly is a graphing library that allows for interactive graphs.
 HTML widgets is a framework that can embed interactive visualizations without requiring Javascript coding.
 
-I created a static visualization of the penglings dataset using ggplot2's "geom_point()", aesthetic functions for the color and size of the data points, and labs() for the axis labels. The colors are hex codes that match the colors of the graph we were tasked with replicating. Creating a manual scale and using hex codes let me keep consistent colors across all of my graphs.
+I created a static visualization of the penglings dataset using ggplot2's geom_point(), aesthetic functions for the color and size of the data points, and labs() for the axis labels. The colors are hex codes that match the colors of the graph we were tasked with replicating. Creating a manual color scale and using hex codes let me keep consistent colors across all of my graphs.
 I created an interactive visualization using plotly. When mousing over a point, a box appears showing the Flipper length, body mass, species, and bill length of the penguin that is represented by that data point. The box disappears when the mouse is removed.
 
 Examples and documentation for ggplot2 and plotly were abundant and easy to find. ggplot2 allows for a diverse visualization with little code. The biggest barrier was familiarizing myself with the goem_point() and aes() functions since I had no previous experience with these.
@@ -24,7 +24,7 @@ https://morganvazy.github.io/a2-DataVis-5ways/R/penglings_R_interactive.html
 Vega-Lite is a high level grammar used to create interactive visuals with JSON.
 I created a scatterplot of the penglings data with a tooltip for hovering over data points. I explicitly coded in the values for tick marks to match the tick marks on the R graph. For the colors representing each pengin species, I used the same hex codes as for the R graph and created a scale that mapped the hex codes to each species. When hovering over a data point, the flipper length, body mass, species, and bill length appear in a box to the side of the point.
 
-There are many strong resources on vega-lite and many examples of scatterplots. Adding the tooltip for interactivity was relatively straightforward and was easily scalable to display many fields when hovering. I felt like the relative sizes of each data point based on bill length were appropriate and made for a legible graph. After replicating the graph, there was very little additional customization necessary in order to make the graph legible. I think Vega-Lite is a strong choice for someone looking for customizability without overwhleming syntax.
+There are many strong resources on vega-lite and many examples of scatterplots. Adding the tooltip for interactivity was relatively straightforward and was easily scalable to display many fields when hovering. I felt like the sizes of each data point first generated based on bill length were appropriate and made for a legible graph. After replicating the graph, there was very little additional customization necessary in order to make the graph legible. I think Vega-Lite is a strong choice for someone looking for customizability without overwhlemingly complex syntax.
 
 ![Vega-Lite](img/Vega-Lite_plot.png)
 
@@ -66,20 +66,20 @@ https://morganvazy.github.io/a2-DataVis-5ways/d3/penglings_D3.html
 - https://chatgpt.com/ - used to help tailor the event logic to the correct D3 version
 
 # Tableau
-Tableau is a visual analytics platform. I created a scatterplot of the Penglings data in Tableau. I did not include the specific hex codes for the colors, but I chose a larger color palette and selected colors that were close to the colors that have been used in the other graphs. The x-axis ticks automatically used the same scale as the other graphs, but there were twice as many y-axis ticks so the spacing between each is half the size.
+Tableau is a visual analytics platform. I created a scatterplot of the Penglings data in Tableau. I did not include the specific hex codes for the colors, but I chose a color palette and selected colors that were close to the colors that have been used in the other graphs. The x-axis ticks automatically used the same scale as the other graphs, but there were twice as many y-axis ticks so the spacing between each is half the size.
 
-Tableau is relatively intuitive and I was able to figure out how to make and customize the scatterplot by playing around with Tableau. I did not have to add the hover feature in Tableau, it was done automatically. The Tableau graph also has a feature where selecting a species on the legend to the right highlights only that species on the graph and grays out the other species. You can also exclude different species. For a scatterplot with common colors, it was easy to replicate and to add interactivity. However, I could see it being difficult to customize this graph or other more complex graph types using Tableau as compared to Vega-Lite or R.
+Tableau is relatively intuitive and I was able to figure out how to make and customize the scatterplot by playing around with Tableau. I did not have to add the hover feature in Tableau as it was done automatically. The Tableau graph also has a feature where selecting a species on the legend to the right highlights only that species on the graph and grays out the other species. You can also exclude different species. For a scatterplot with common colors, it was easy to replicate and to add interactivity. However, I could see it being difficult to customize this graph or other more complex graph types using Tableau as compared to Vega-Lite or R.
 ![d3](img/tableau_plot.png)
 
 ## Link to interactive plot
 https://public.tableau.com/app/profile/morgan.vasiliou/viz/penglings-tableau/Sheet1?publish=yes
 ## Technical Achievements
-- Hover feature that shows the penguin's flipper length, body mass, species, and bill length using a tooltip.
+- Hover feature that shows the penguin's flipper length, body mass, species, and bill length.
 ## Design Achievements
 - color scheme was selected to remain consistent with the other graphs' coloring. 
 
 # Vega Altair + Python
-Vega-Altair is a visualization library for python built on Vega-Lite and Vega grammars. I replicated the Penglings scatterplot using the same hex codes for the colors and tick mark values as previously. The tick marks were explicitly coded in using alt.Axis (values = []). I added the same hover feature that shows flipper length, body mass, species, and bill length using .interactive().
+Vega-Altair is a visualization library for python built on Vega-Lite and Vega grammars. I replicated the Penglings scatterplot using the same hex codes for the colors and tick mark values as previously. The tick marks were explicitly coded in using alt.Axis (values = []). I added the same hover feature that shows flipper length, body mass, species, and bill length using a tooltip and .interactive().
 
 There were sufficient resources for Vega altair and I felt like the examples were straightforward. However, I did have to synthesize a couple different resources to learn enough to replicate this plot. I preferred this Vega resource over Vega-Lite as Vega-altair felt much simpler and more concise than Vega-Lite. However, both libraries were concise and can add customization without much effort.
 ![d3](img/altair_plot.png)
